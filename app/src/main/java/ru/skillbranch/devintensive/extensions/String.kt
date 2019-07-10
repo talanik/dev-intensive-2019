@@ -1,9 +1,9 @@
 package ru.skillbranch.devintensive.extensions
 
-fun String.truncate(strindSize : Int = 16): String?{
-    val txt: String = this
-    if (txt.length > strindSize) return "${txt.substring(0, strindSize+1).trimEnd()}..."
-    else return txt
+fun String.truncate(n : Int = 16): String?{
+    val temp = this.trimEnd()
+    if (temp.length <= n) return temp
+    else return temp.subSequence(0, n).trimEnd().toString() + "..."
 }
 
 fun String.stripHtml(): String? {
