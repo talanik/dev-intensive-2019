@@ -81,4 +81,4 @@ class Bender(var status: Status = Status.NORMAL, var question: Question = Questi
 
         abstract fun nextQuestion(): Question
     }
-}
+} 
